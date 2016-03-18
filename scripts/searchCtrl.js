@@ -1,5 +1,9 @@
 var app = angular.module('mapsApp');
 var searchCtrl = function ($scope, mapsProp, $rootScope, PtMapsConfig) {
+//    document.getElementById('map').addEventListener("click", function () {
+            //        console.log("clicked on div");
+            //    });
+
     $scope.message = '';
     //$scope.distance = ['1-3', '3-5', '>5'];
     $scope.time = [];
@@ -49,9 +53,9 @@ var searchCtrl = function ($scope, mapsProp, $rootScope, PtMapsConfig) {
             }
         });
     };
-//    $scope.clear = function () {
-        //        $scope.tab = 1;
-        //    }
+    //    $scope.clear = function () {
+    //        $scope.tab = 1;
+    //    }
     $scope.find = function () {
         $scope.message = '';
         $scope.searchResults = [];

@@ -42,26 +42,15 @@ var showMapCtrl = function ($scope, mapsProp, $rootScope, timeSenseService, $q, 
     var polygon, d;
     var positionSuccess = function () {
         bounds = new google.maps.LatLngBounds();
-        $scope.map = new google.maps.Map(document.getElementById('map'), options);
-        map = $scope.map;
-
         project = localStorage.getItem('project');
         project = JSON.parse(project);
-        //        //distance = localStorage.getItem('distance');
-        var minDistance; // = distance[0];
-        var maxDistance; // = distance[2];
-        //        if (distance[0] == '>') {
-        //            minDistance = 5;
-        //            maxDistance = 15;
-        //}
+        var minDistance;
+        var maxDistance;
         timetype = localStorage.getItem('timetype');
         timetype = JSON.parse(timetype);
         window.localStorage.clear();
 
-        //if (project && project.latitude) {
         var latLng = new google.maps.LatLng(project.latitude, project.longitude);
-
-
         if (timetype) {
             var pol;
             d = getTime(timetype);
@@ -99,6 +88,8 @@ var showMapCtrl = function ($scope, mapsProp, $rootScope, timeSenseService, $q, 
                 console.log(pol);
             }
             timeSenseService.drawTimeSense(d, project);
+        } else {
+            console.log("select time and type");
         }
 
         createMarker(project, 'red');
@@ -154,16 +145,17 @@ var showMapCtrl = function ($scope, mapsProp, $rootScope, timeSenseService, $q, 
         });
     }
     google.maps.event.addListener(map, 'click', function () {
+        console.log('clicked on map');
         this.setOptions({
+            scrollwheel: true,
             navigationControl: true,
             mapTypeControl: true,
             mapTypeControlOptions: {
                 style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-                position: google.maps.ControlPosition.TOP_RIGHT
+                position: google.maps.ControlPosition.TOP_RIGHT,
             },
             scaleControl: true,
             draggable: true,
-            scrollwheel: true
         });
     });
 
