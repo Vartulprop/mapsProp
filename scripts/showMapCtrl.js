@@ -14,6 +14,11 @@ var showMapCtrl = function ($scope, mapsProp, $rootScope, timeSenseService, $q, 
             lat: lt,
             lng: ln
         },
+        scrollwheel: false,
+        navigationControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        draggable: false,
         zoom: 8,
     }
     var getMaxDistance = function (source, arr) {
@@ -148,6 +153,20 @@ var showMapCtrl = function ($scope, mapsProp, $rootScope, timeSenseService, $q, 
             infoWindow.close($scope.map, infoWindow);
         });
     }
+    google.maps.event.addListener(map, 'click', function () {
+        this.setOptions({
+            navigationControl: true,
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                position: google.maps.ControlPosition.TOP_RIGHT
+            },
+            scaleControl: true,
+            draggable: true,
+            scrollwheel: true
+        });
+    });
+
     var createMarker = function (info, type) {
         var marker = new google.maps.Marker({
             position: new google.maps.LatLng(info.latitude, info.longitude),
