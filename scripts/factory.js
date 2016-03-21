@@ -37,7 +37,10 @@
         }
         var getTypeDownData = function (string) {
             return $http.get("https://www.proptiger.com/columbus/app/v4/typeahead?query=" + string + "&typeAheadType=LOCALITY,SUBURB&rows=25&city=Gurgaon").then(function (response) {
-                return response.data;
+                return response.data;//.data.map(function (item) {
+//                    console.log(item.entityName);
+//                    return item.entityName;
+//                });
             });
         };
         var getPlaces = function (lat, long) {
