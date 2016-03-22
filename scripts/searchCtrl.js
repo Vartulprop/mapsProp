@@ -1,5 +1,5 @@
 var app = angular.module('mapsApp');
-var searchCtrl = function ($scope, mapsProp, $rootScope, PtMapsConfig, $uibModal) {
+var searchCtrl = function ($scope, mapsProp, $rootScope, PtMapsConfig) {
 
     $scope.message = '';
     $scope.showModal = '';
@@ -43,22 +43,9 @@ var searchCtrl = function ($scope, mapsProp, $rootScope, PtMapsConfig, $uibModal
     $rootScope.$on('showUpdateProgress', function (event, args) {
         $scope.updateCompletion = (args.val.angle * 100) / (2 * Math.PI);;
     });
-    var k = [];
     $scope.search = function (string) {
-        $scope.searchResults = [];
-        mapsProp.getTypeDownData(string).then(function (result) {
-            $scope.searchResults = result.data;
-
-            //            if ($scope.searchResults.length == 0 && string) {
-            //                $scope.message = 'No results returned';
-            //            } else {
-            //                $scope.message = '';
-            //            }
-        });
+        return mapsProp.getTypeDownData(string);
     };
-    //    $scope.clear = function () {
-    //        $scope.tab = 1;
-    //    }
     $scope.find = function () {
         $scope.message = '';
         $scope.searchResults = [];

@@ -1,8 +1,13 @@
-<div id='bar' class="container-fluid">
-    <div class="form-group">
-        <input name="states" id="states" type="text" ng-model="string" uib-typeahead="state.entityName for state in search($viewValue) | limitTo:8" typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control" placeholder="{{string}}">
-        <button class="btn btn-success" type="submit" ng-click="find()">Submit</button>
+<div id='bar' class='container-fluid typeahead-demo'>
+
+    <!--    <pre>{{asyncSelected}}</pre>-->
+    <input id='inp' type="text" ng-model="asyncSelected" placeholder="Locations loaded via $http" uib-typeahead="address.entityName for address in search($viewValue)" typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control" placeholder={{asyncSelected}}>
+    <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+    <div ng-show="noResults">
+        <i class="glyphicon glyphicon-remove"></i> No Results Found
     </div>
+
+    <button type="submit" class='btn btn-primary' ng-click='find()'>click</button>
 </div>
 <!--
 <div class='dropdown'>
@@ -12,7 +17,7 @@
     </form>
     {{message}}
 
-    <div ng-repeat='str in searchResults'>
+    <div ng-repeat='str in searchResults'>-
         <ul>
             <li ng-click="setProject(str)">
                 {{str.coreText}}

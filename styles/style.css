@@ -11,6 +11,10 @@ search {
     position: absolute;
 }
 
+#inp {
+    width: 300px;
+}
+
 .infoWindowContent {
     font-size: 14px !important;
     border-top: 1px solid #ccc;
@@ -24,7 +28,6 @@ search {
 }
 
 #bar {
-    position: relative;
-    width: 230px;
-    height: 100px;
+    z-index: 999;
+    position: absolute;
 }
