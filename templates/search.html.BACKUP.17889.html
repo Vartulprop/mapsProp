@@ -1,7 +1,16 @@
+<<<<<<< Updated upstream
+<div class="container">
+    <div class='col-sm-6 container-fluid typeahead-demo'>
+        <input type="text" ng-model="string" uib-typeahead="address.entityName for address in  search($viewValue)" typeahead-loading="searchResults" typeahead-no-results="noResults" class="form-control">
+        <div ng-show="noResults">
+            <i class="glyphicon glyphicon-remove"></i> No Results Found
+        </div>
+=======
 <div id='bar' class="container-fluid">
     <div class="form-group">
         <input name="states" id="states" type="text" ng-model="string" uib-typeahead="state.entityName for state in search($viewValue) | limitTo:8" typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control" placeholder="{{string}}">
         <button class="btn btn-success" type="submit" ng-click="find()">Submit</button>
+>>>>>>> Stashed changes
     </div>
 </div>
 <!--

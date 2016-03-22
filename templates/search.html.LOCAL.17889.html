@@ -1,0 +1,72 @@
+<div class="container">
+    <div class='col-sm-6 container-fluid typeahead-demo'>
+        <input type="text" ng-model="string" uib-typeahead="address.entityName for address in  search($viewValue)" typeahead-loading="searchResults" typeahead-no-results="noResults" class="form-control">
+        <div ng-show="noResults">
+            <i class="glyphicon glyphicon-remove"></i> No Results Found
+        </div>
+    </div>
+
+    <!--
+    <div class='dropdown'>
+    <form ng-submit="find()">
+        <input type="text" ng-model="string" ng-keyup="search(string)" placeholder="{{string}}" ng-mouseover="clear()" />
+        <input type="submit" />
+    </form>
+    {{message}}
+
+    <div ng-repeat='str in searchResults'>
+        <ul>
+            <li ng-click="setProject(str)">
+                {{str.coreText}}
+            </li>
+        </ul>
+    </div>
+</div>
+-->
+    <div ng-show="tab==2">
+
+        <h4 ng-click="tab=2">Time</h4>
+
+
+        <label ng-repeat="name in time">
+            <input type="radio" name='k2' value="{{name}}" ng-model="time" ng-click="setValTime(name)"> {{name.add[0].range}} Min
+        </label>
+        <br>
+        <label ng-repeat="type in types">
+            <input type="radio" name='k1' value="{{type}}" ng-model="types" ng-change="setValType(type)"> {{type}}
+        </label>
+        <div id="bar" ng-if='updateCompletion'>
+            <uib-progressbar value="updateCompletion"></uib-progressbar>
+        </div>
+        <div id="bar" ng-if='updateCompletion>100'>
+            <strong> Red </strong> marker is source
+            <br>
+            <strong> Blue </strong> markers are search results
+            <br>
+        </div>
+    </div>
+</div>
+
+<!--
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+</button>
+
+Modal
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>-->
