@@ -1,9 +1,6 @@
 <div class="container">
     <div class='col-sm-6 container-fluid typeahead-demo'>
-        <input type="text" ng-model="string" uib-typeahead="address for address in  search($viewValue)" typeahead-loading="searchResults" typeahead-no-results="noResults" class="form-control">
-        <div ng-repeat="str in searchResults">
-            <i class="glyphicon glyphicon-refresh">{{str.entityName}}</i>
-        </div>
+        <input type="text" ng-model="string" uib-typeahead="address.entityName for address in  search($viewValue)" typeahead-loading="searchResults" typeahead-no-results="noResults" class="form-control">
         <div ng-show="noResults">
             <i class="glyphicon glyphicon-remove"></i> No Results Found
         </div>
