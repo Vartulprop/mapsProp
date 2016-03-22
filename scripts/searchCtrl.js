@@ -1,7 +1,8 @@
 var app = angular.module('mapsApp');
-var searchCtrl = function ($scope, mapsProp, $rootScope, PtMapsConfig) {
+var searchCtrl = function ($scope, mapsProp, $rootScope, PtMapsConfig, $uibModal) {
 
     $scope.message = '';
+    $scope.showModal = '';
     //$scope.distance = ['1-3', '3-5', '>5'];
     $scope.time = [];
     for (var i = 0; i < PtMapsConfig.travelHeatMapConfig.timeSequence.length; i++)
@@ -21,6 +22,10 @@ var searchCtrl = function ($scope, mapsProp, $rootScope, PtMapsConfig) {
     $rootScope.$on('showMessage', function (event, args) {
         $scope.message = args.messageContent;
     })
+    $rootScope.$on('showModal', function (event, args) {
+        console.log("came here");
+        $scope.showModal = 1;
+    })
     $scope.setValTime = function (val) {
         console.log(val.add[0].range);
         time = val.add[0].range;
@@ -38,11 +43,11 @@ var searchCtrl = function ($scope, mapsProp, $rootScope, PtMapsConfig) {
     $rootScope.$on('showUpdateProgress', function (event, args) {
         $scope.updateCompletion = (args.val.angle * 100) / (2 * Math.PI);;
     });
+    var k = [];
     $scope.search = function (string) {
         $scope.searchResults = [];
         mapsProp.getTypeDownData(string).then(function (result) {
             $scope.searchResults = result.data;
-            console.log($scope.searchResults)
 
             //            if ($scope.searchResults.length == 0 && string) {
             //                $scope.message = 'No results returned';

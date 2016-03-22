@@ -1,62 +1,23 @@
- #map {
-     height: 100%;
-     width: 100%;
-     position: absolute;
-     border: 1px solid black;
- }
- 
- .infoWindowContent {
-     font-size: 14px !important;
-     border-top: 1px solid #ccc;
-     padding-top: 10px;
- }
- /*
- search {
-    top: 20%;
+#map {
+    z-index: 99;
+    height: 100%;
     width: 100%;
+    position: absolute;
+    border: 1px solid black;
 }
 
-#bar {
+search {
+    z-index: 100;
     position: absolute;
-    width: 230px;
-    height: 100px;
 }
-*/
- 
- ul:hover {
-     position: relative;
-     background-color: beige;
- }
- 
- .nav,
- .pagination,
- .carousel,
- .panel-title a {
-     cursor: pointer;
- }
- 
- .typeahead-demo .custom-popup-wrapper {
-     position: absolute;
-     top: 100%;
-     left: 0;
-     z-index: 1000;
-     display: none;
-     background-color: #f9f9f9;
- }
- 
- .typeahead-demo .custom-popup-wrapper > .message {
-     padding: 10px 20px;
-     border-bottom: 1px solid #ddd;
-     color: #868686;
- }
- 
- .typeahead-demo .custom-popup-wrapper > .dropdown-menu {
-     position: static;
-     float: none;
-     display: block;
-     min-width: 160px;
-     background-color: transparent;
-     border: none;
-     border-radius: 0;
-     box-shadow: none;
- }
+
+.infoWindowContent {
+    font-size: 14px !important;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+i:hover {
+    position: relative;
+    background-color: beige;
+}

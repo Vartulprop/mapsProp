@@ -145,7 +145,6 @@ var showMapCtrl = function ($scope, mapsProp, $rootScope, timeSenseService, $q, 
         });
     }
     google.maps.event.addListener(map, 'click', function () {
-        console.log('clicked on map');
         this.setOptions({
             scrollwheel: true,
             navigationControl: true,
@@ -157,6 +156,8 @@ var showMapCtrl = function ($scope, mapsProp, $rootScope, timeSenseService, $q, 
             scaleControl: true,
             draggable: true,
         });
+
+        $rootScope.$broadcast("showModal", {});
     });
 
     var createMarker = function (info, type) {
