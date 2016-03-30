@@ -8,7 +8,7 @@
 
 5.to include the functionality use the dependencies in bower.json file and 2 tags
 
-1.<map></map>
-2.<search></search>
+	1."<map></map>"
+	2."<search></search>"
 
 
