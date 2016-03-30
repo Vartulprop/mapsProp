@@ -1,5 +1,5 @@
 {
-    "name": "vartul",
+    "name": "timeBasedSearch",
     "description": "Google maps time based search",
     "main": "index.html",
     "authors": [
@@ -16,10 +16,10 @@
     "test",
     "tests"
   ],
-    "dependencies": {
-        "jquery": "^2.2.2",
-        "angular": "angularjs#^1.5.3",
-        "angular-animate": "^1.5.3",
-        "ui-bootstrap": "^1.2.5"
-    }
+    //    "dependencies": {
+    //        "jquery": "^2.2.2",
+    //        "angular": "angularjs#^1.5.3",
+    //        "angular-animate": "^1.5.3",
+    //        "ui-bootstrap": "^1.2.5"
+    //    }
 }
