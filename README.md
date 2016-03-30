@@ -6,7 +6,7 @@
 
 4.timeBasedSearch/build/bower_test.min.js is minimised file for the timeBasedSearch functionality
 
-5.to include the functionality use the dependencies in bower.json file and 2 tags
+5.to use the functionality include the dependencies in bower.json file and 2 tags
 
 	1."<map></map>"
 	2."<search></search>"
