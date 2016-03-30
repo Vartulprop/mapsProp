@@ -20,6 +20,6 @@
         "jquery": "^2.2.2",
         "angular": "angularjs#^1.5.3",
         "angular-animate": "^1.5.3",
-        "ui-bootstrap": "^1.2.5",
+        "ui-bootstrap": "^1.2.5"
     }
 }
