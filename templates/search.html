@@ -1,4 +1,9 @@
 <div>
+    <div>
+        Choose a city:
+        <select data-ng-model="city" data-ng-options="act for act in cities" ng-click="setCity(city)">
+        </select>
+    </div>
     <form ng-submit="find()">
         <input type="text" ng-model="string" ng-keyup="search(string)" placeholder="{{string}}" ng-mouseover="clear()" />
         <input type="submit" />

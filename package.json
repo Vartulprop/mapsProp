@@ -1,0 +1,29 @@
+{
+  "name": "bower_test",
+  "version": "1.0.0",
+  "description": "faefs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vartulprop/mapsProp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vartulprop/mapsProp/issues"
+  },
+  "homepage": "https://github.com/Vartulprop/mapsProp",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-usemin": "^3.1.1",
+    "jit-grunt": "^0.10.0",
+    "time-grunt": "^1.3.0"
+  }
+}
