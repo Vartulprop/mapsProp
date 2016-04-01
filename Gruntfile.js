@@ -1,8 +1,10 @@
 module.exports = function (grunt) {
+    require('time-grunt')(grunt);
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         concat: {
             dist: {
+
                 src: ['scripts/*.js', 'scripts/maps/*.js', 'scripts/polygon/*.js'],
                 dest: 'build/<%= pkg.name %>.js',
             }

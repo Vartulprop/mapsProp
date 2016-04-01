@@ -1,0 +1,26 @@
+{
+  "name": "vartul",
+  "description": "Google maps time based search",
+  "main": "index.html",
+  "authors": [
+    "vartulprop <vartul.mittal@proptiger.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Vartulprop/mapsProp",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2",
+    "angular": "angularjs#^1.5.3",
+    "angular-animate": "^1.5.3",
+    "ui-bootstrap": "^1.2.5",
+    "google-map": "^1.1.10"
+  }
+}
