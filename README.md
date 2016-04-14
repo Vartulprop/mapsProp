@@ -2,9 +2,12 @@
 
 1. Clone repository https://github.com/Vartulprop/mapsProp.git
 
-2. Run:- bower install in command line in the folder mapsProp
+2. Point the terminal to directory mapsProp (or whichever directory you cloned it to)
 
-3. Run the index.html on localhost.
+3. Run:- bower install in command line. 
+
+4. Run the index.html on localhost.
+
 
 Note :- To change anything please feel free to check the scripts folder. the names of files are self explanatory
 
