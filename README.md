@@ -1,20 +1,26 @@
-1.clone repository https://github.com/Vartulprop/mapsProp.git
+# To run this in application
+---
 
-2.then run:- bower install in command line in the folder mapsProp
+1. Clone repository https://github.com/Vartulprop/mapsProp.git
 
-3.run the index.html on localhost to watch the application.
+2. Run:- bower install in command line in the folder mapsProp
 
-4.to change anything please feel free to check the scripts folder. the names of files are self explanatory
+3. Run the index.html on localhost.
 
-==========================================================================================================
+Note :- To change anything please feel free to check the scripts folder. the names of files are self explanatory
 
-1.build/bower_test.min.js is minimised file for the timeBasedSearch functionality
 
-2.to use the functionality include the dependencies in bower.json file ,the file described in step 1 and 2 tags
+---
+# To use functionality in your existing application
 
-	1."<map></map>"
-	2."<search></search>"
+1. build/bower_test.min.js is minimised file for the timeBasedSearch functionality
 
-in your application.
+2. To use the functionality include the dependencies in bower.json file ,the file described in step 1 and 2 tags in your application.
+
+	1. "<map></map>"
+	2. "<search></search>"
+
+Note :- Name of id for maps can clash with your existing application. Please keep that in mind.
+
 
 
