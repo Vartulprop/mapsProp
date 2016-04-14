@@ -1,4 +1,4 @@
-# To run this in application
+# To run this webApp
 
 1. Clone repository https://github.com/Vartulprop/mapsProp.git
 
