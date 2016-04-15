@@ -16,41 +16,39 @@ function MarkerClusterer(map, opt_markers, opt_options) {
      */
     this.ready_ = false;
 
-    var options = opt_options || {};
+    var options = {};
 
     /**
      * @type {number}
      * @private
      */
-    this.gridSize_ = options['gridSize'] || 60;
+    this.gridSize_ = 60;
 
     /**
      * @private
      */
-    this.minClusterSize_ = options['minimumClusterSize'] || 2;
+    this.minClusterSize_ = 2;
 
 
     /**
      * @type {?number}
      * @private
      */
-    this.maxZoom_ = options['maxZoom'] || null;
+    this.maxZoom_ = null;
 
-    this.styles_ = options['styles'] || [];
-
-    /**
-     * @type {string}
-     * @private
-     */
-    this.imagePath_ = options['imagePath'] ||
-        this.MARKER_CLUSTER_IMAGE_PATH_;
+    this.styles_ = [];
 
     /**
      * @type {string}
      * @private
      */
-    this.imageExtension_ = options['imageExtension'] ||
-        this.MARKER_CLUSTER_IMAGE_EXTENSION_;
+    this.imagePath_ = this.MARKER_CLUSTER_IMAGE_PATH_;
+
+    /**
+     * @type {string}
+     * @private
+     */
+    this.imageExtension_ = this.MARKER_CLUSTER_IMAGE_EXTENSION_;
 
     /**
      * @type {boolean}
@@ -58,9 +56,6 @@ function MarkerClusterer(map, opt_markers, opt_options) {
      */
     this.zoomOnClick_ = true;
 
-    if (options['zoomOnClick'] != undefined) {
-        this.zoomOnClick_ = options['zoomOnClick'];
-    }
 
     /**
      * @type {boolean}
@@ -68,9 +63,6 @@ function MarkerClusterer(map, opt_markers, opt_options) {
      */
     this.averageCenter_ = false;
 
-    if (options['averageCenter'] != undefined) {
-        this.averageCenter_ = options['averageCenter'];
-    }
 
     this.setupStyles_();
 
