@@ -906,8 +906,7 @@ function MarkerClusterer(map, opt_markers, opt_options) {
  * @private
  */
 MarkerClusterer.prototype.MARKER_CLUSTER_IMAGE_PATH_ =
-    'https://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/' +
-    'images/m';
+    '../../images/m1';
 
 
 /**
@@ -963,7 +962,7 @@ MarkerClusterer.prototype.setupStyles_ = function () {
 
     for (var i = 0, size; size = this.sizes[i]; i++) {
         this.styles_.push({
-            url: this.imagePath_ + 1 + '.' + this.imageExtension_,
+            url: this.imagePath_ + '.' + this.imageExtension_,
             height: size,
             width: size
         });
